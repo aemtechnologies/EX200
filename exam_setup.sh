@@ -34,7 +34,7 @@ ssh root@servera "yum remove bzip2 -y"
 # ------------------------------------------------------------
 # Q13 - Create redhat user and add to dba group
 # ------------------------------------------------------------
-ssh root@servera "useradd redhat && passwd --stdin redhat >/dev/null 2>&1 && groupadd dba 2>/dev/null || true; usermod -aG dba redhat"
+ssh root@servera "useradd geo && passwd --stdin redhat >/dev/null 2>&1 && groupadd dba 2>/dev/null || true; usermod -aG dba redhat"
 
 # ------------------------------------------------------------
 # Q2 - Remove custom YUM repository files
