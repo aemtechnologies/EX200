@@ -13,6 +13,7 @@ sleep 2
 # ------------------------------------------------------------
 # Q3 - Change Apache Listen port from 80 to 82
 # ------------------------------------------------------------
+ssh root@servera "yum install httpd -y"
 ssh root@servera "sed -i 's/Listen 80/Listen 82/g' /etc/httpd/conf/httpd.conf"
 
 # ------------------------------------------------------------
@@ -34,13 +35,13 @@ ssh root@servera "yum remove bzip2 -y"
 # ------------------------------------------------------------
 # Q13 - Create redhat user and add to dba group
 # ------------------------------------------------------------
-ssh root@servera "useradd geo && echo redhat | passwd --stdin geo >/dev/null"
+ssh root@servera "useradd geo && echo redhat | passwd --stdin geo &>/dev/null"
 ssh root@servera "groupadd dba;usermod -aG dba geo"
 
 # ------------------------------------------------------------
 # Q16 - Create user sam
 # ------------------------------------------------------------
-ssh root@servera "useradd sam && echo redhat | passwd --stdin sam >/dev/null"
+ssh root@servera "useradd sam && echo redhat | passwd --stdin sam &>/dev/null"
 # ------------------------------------------------------------
 
 # Q2 - Remove custom YUM repository files
