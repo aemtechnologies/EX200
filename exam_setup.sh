@@ -38,6 +38,11 @@ ssh root@servera "useradd geo && echo redhat | passwd --stdin geo >/dev/null"
 ssh root@servera "groupadd dba;usermod -aG dba geo"
 
 # ------------------------------------------------------------
+# Q16 - Create user sam
+# ------------------------------------------------------------
+ssh root@servera "useradd sam && echo redhat | passwd --stdin sam >/dev/null"
+# ------------------------------------------------------------
+
 # Q2 - Remove custom YUM repository files
 # ------------------------------------------------------------
 ssh root@servera "rm -f /etc/yum.repos.d/*"
